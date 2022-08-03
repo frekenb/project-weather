@@ -12,7 +12,14 @@ function formateDate(timestamp) {
   ];
   let day = days[now.getDay()];
   let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
   let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
   return `${day} ${hours}:${minutes}`;
 }
@@ -30,7 +37,7 @@ function showTemperature(response) {
   );
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
-  let sunrise = document.quserySelector("#sunrise");
+  let sunrise = document.querySelector("#sunrise");
   let sunset = document.querySelector("#sunset");
   let dateElement = document.querySelector("#current-date");
 
