@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="app-container">
+        <div class="right-side">
+          <header>
+            <form action="click" id="form-search">
+              <button id="button">
+                <span class="material-symbols-outlined">my_location</span>
+              </button>
+              <label for="submit">
+                <input
+                  type="submit"
+                  name="search"
+                  id="search"
+                  autofocus="on"
+                  autocomplete="additional-name"
+                  class="material-symbols-outlined"
+                  value="search"
+                />
+              </label>
+              <input
+                id="form-input"
+                type="search"
+                name="search"
+                placeholder="Search for places..."
+              />
+            </form>
+          </header>
+          <main>
+            <div id="icon"></div>
+            <div class="current-temperature">
+              <span id="weather">32</span>°C
+            </div>
+            <div class="current-day" id="current-date">
+              <span id="current-day">Monday</span>,
+              <span class="time"
+                ><span id="time">16</span>:<span id="minutes">00</span>
+              </span>
+            </div>
+            <div id="sky-description">Sunny</div>
+            <div class="rain-not-rain" id="sky-description-special">
+              No rain
+            </div>
+          </main>
+          <footer>
+            <div class="current-city" id="current-city">Yerevan, Armenia</div>
+          </footer>
+        </div>
+        <div class="left-side">
+          <div class="container-days">
+            <ul>
+              <li class="day-box">
+                Mon
+                <img src="svg\sun.svg" alt="" class="sun-img" />
+                <div class="current-temperature">30°C</div>
+              </li>
+              <li class="day-box">
+                Tue
+                <img src="svg\sun.svg" alt="" class="sun-img" />
+                <div class="current-temperature">30°C</div>
+              </li>
+              <li class="day-box">
+                Wed
+                <img src="svg\sun.svg" alt="" class="sun-img" />
+                <div class="current-temperature">30°C</div>
+              </li>
+              <li class="day-box">
+                Thu
+                <img src="svg\sun.svg" alt="" class="sun-img" />
+                <div class="current-temperature">30°C</div>
+              </li>
+              <li class="day-box">
+                Fri
+                <img src="svg\sun.svg" alt="" class="sun-img" />
+                <div class="current-temperature">30°C</div>
+              </li>
+            </ul>
+          </div>
+          <div class="container-highlights">
+            <ul>
+              <li class="highlight">
+                UV index
+                <div>
+                  <img
+                    class="img-uv-index"
+                    src="/uv/sun-color-4.4.svg"
+                    alt=""
+                  />
+                </div>
+              </li>
+              <li class="highlight">
+                Wind Satus
+                <div id="wind-speed">7.70 km/h</div>
+                <div class="comment"></div>
+              </li>
+              <li class="highlight">
+                Sunrise&Sunset
+                <div id="sunrise">6:35AM</div>
+                <div id="sunset">5:42PM</div>
+                <div class="comment"></div>
+              </li>
+            </ul>
+            <ul>
+              <li class="highlight">
+                Humidity
+                <div id="himidity">12%</div>
+              </li>
+              <li class="highlight">
+                Visibility
+                <div>5.2 km</div>
+                <div class="comment"></div>
+              </li>
+              <li class="highlight">
+                Air Quality
+                <div id="air-quality">102</div>
+                <div class="comment"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/src/action.js"></script>
+  </body>
+</html>
