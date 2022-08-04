@@ -63,7 +63,7 @@ function formateDate(timestamp) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day}, ${hours}:${minutes}`;
 }
 
 function convertTime(timestamp) {
