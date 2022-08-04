@@ -101,6 +101,7 @@ main img {
   color: rgb(153, 153, 153);
   margin-bottom: 10px;
 }
+
 footer {
   padding-top: 1rem;
   margin: 0;
@@ -109,7 +110,7 @@ footer {
   text-align: center;
   margin-top: 1rem;
   margin: auto;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
   /*   width: 18vw; */
   height: 14vh;
   display: flex;
@@ -119,7 +120,7 @@ footer {
   font-size: 1.5rem;
   color: #f4f1de;
   border: 1px solid #f4f1de;
-  background: #7076a9;
+  background: #de7946;
 }
 
 .left-side {
@@ -148,10 +149,7 @@ ul {
 .left-side li {
   background-color: #fffefc;
 }
-li .sun-img {
-  width: 40%;
-  padding: 0.2rem;
-}
+
 .container-days ul li {
   display: flex;
   flex-direction: column;
@@ -165,7 +163,13 @@ li .sun-img {
   width: 8vw;
   height: 15vh;
   margin: 0.8vw;
-  font-size: 17px;
+}
+.day-box div.weather-forecast-day {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.day-box span.forecast-min-temp {
+  color: #c1c2c5;
 }
 
 .container-highlights {
@@ -173,24 +177,38 @@ li .sun-img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-bottom: 3rem;
 }
 
 .container-highlights ul {
   padding-left: 0;
+  margin: auto;
 
   align-items: center;
 }
+
 .img-uv-index {
   width: 35%;
 }
 .left-side .container-highlights .highlight {
   font-size: 1rem;
-  width: 15vw;
-  height: 16vh;
-  margin: 0.2rem;
+  width: 13vw;
+  height: 18vh;
+  margin: 0.4rem;
   text-align: center;
   border-radius: 2rem;
-  padding-top: 0.5rem;
+  padding: 0.7rem;
+}
+.left-side .container-highlights .highlight div.highlight-main-information {
+  font-size: 2rem;
+  margin-top: 1em;
+  font-weight: 900;
+  color: #414141;
+}
+.left-side .container-highlights .highlight:nth-child(3) div {
+  color: #414141;
+  margin-top: 1em;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 400px) {

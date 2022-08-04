@@ -11,6 +11,10 @@
     />
     <link rel="stylesheet" href="/src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1528145e7d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -64,33 +68,49 @@
           <div class="container-days">
             <ul id="forecast">
               <li class="day-box">
-                Mon
-                <img src="svg\sun.svg" alt="" class="sun-img" />
-                <div class="current-temperature">30°C</div>
+                <div class="weather-forecast-day">Mon</div>
+                <img src="" alt="" class="sun-img" />
+                <div class="forecast-day">
+                  <span class="forecast-max-temp"></span>
+                  <span class="forecast-min-temp"></span>
+                </div>
               </li>
               <li class="day-box">
-                Tue
-                <img src="svg\sun.svg" alt="" class="sun-img" />
-                <div class="current-temperature">30°C</div>
+                <div class="weather-forecast-day">Mon</div>
+                <img src="" alt="" class="sun-img" />
+                <div class="forecast-day">
+                  <span class="forecast-max-temp"></span>
+                  <span class="forecast-min-temp"></span>
+                </div>
               </li>
               <li class="day-box">
-                Wed
-                <img src="svg\sun.svg" alt="" class="sun-img" />
-                <div class="current-temperature">30°C</div>
+                <div class="weather-forecast-day">Mon</div>
+                <img src="" alt="" class="sun-img" />
+                <div class="forecast-day">
+                  <span class="forecast-max-temp"></span>
+                  <span class="forecast-min-temp"></span>
+                </div>
               </li>
               <li class="day-box">
-                Thu
-                <img src="svg\sun.svg" alt="" class="sun-img" />
-                <div class="current-temperature">30°C</div>
+                <div class="weather-forecast-day">Mon</div>
+                <img src="" alt="" class="sun-img" />
+                <div class="forecast-day">
+                  <span class="forecast-max-temp"></span>
+                  <span class="forecast-min-temp"></span>
+                </div>
               </li>
               <li class="day-box">
-                Fri
-                <img src="svg\sun.svg" alt="" class="sun-img" />
-                <div class="current-temperature">30°C</div>
+                <div class="weather-forecast-day">Mon</div>
+                <img src="" alt="" class="sun-img" />
+                <div class="forecast-day">
+                  <span class="forecast-max-temp"></span>
+                  <span class="forecast-min-temp"></span>
+                </div>
               </li>
             </ul>
           </div>
           <div class="container-highlights">
+            <div>Today's highlights</div>
             <ul>
               <li class="highlight">
                 UV index
@@ -104,30 +124,39 @@
               </li>
               <li class="highlight">
                 Wind Satus
-                <div id="wind-speed">7.70 km/h</div>
+                <div id="wind-speed" class="highlight-main-information">
+                  7.70 km/h
+                </div>
                 <div class="comment"></div>
               </li>
               <li class="highlight">
                 Sunrise&Sunset
-                <div id="sunrise">6:35AM</div>
-                <div id="sunset">5:42PM</div>
-                <div class="comment"></div>
+                <div>
+                  <i class="fa-solid fa-up-long"></i>
+                  <span id="sunrise">6:35AM</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-down-long"></i>
+                  <span id="sunset">5:42PM</span>
+                </div>
               </li>
             </ul>
             <ul>
               <li class="highlight">
                 Humidity
-                <div id="humidity">12%</div>
+                <div id="humidity" class="highlight-main-information">12%</div>
               </li>
               <li class="highlight">
                 Visibility
-                <div id="visibility">5.2 km</div>
-                <div class="comment"></div>
+                <div id="visibility" class="highlight-main-information">
+                  5.2 km
+                </div>
               </li>
               <li class="highlight">
                 Air Quality
-                <div id="air-quality">102</div>
-                <div class="comment"></div>
+                <div id="air-quality" class="highlight-main-information">
+                  102
+                </div>
               </li>
             </ul>
           </div>
