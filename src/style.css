@@ -50,12 +50,14 @@ body {
   background-color: transparent;
   border: none;
 }
-input:hover {
+form:hover {
   transform: scale(110%);
+  outline: 2px double #cecece;
+  border-radius: 10px;
 }
 
 input:focus-visible {
-  outline: 1px solid #eaebee;
+  outline: none;
 }
 
 .right-side header form button {
@@ -64,7 +66,7 @@ input:focus-visible {
 }
 
 .right-side header form button span {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .right-side main {

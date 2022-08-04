@@ -24,6 +24,29 @@ function formateDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function convertTime(timestamp) {
+  let now = new Date(timestamp * 1000);
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  return `${hours}:${minutes}`;
+}
+
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Sun", "Mon", "Thu", "Wed", "Tue", "Fri", "Sat"];
+
+  let forecast = response.data.daily;
+  console.log(response.data.daily);
+}
+
+function getForecast(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let key = "6fa0aa19737bc1b820cf0e5af8325e8f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
   document.querySelector("#weather").innerHTML = Math.round(
     response.data.main.temp
@@ -36,9 +59,21 @@ function showTemperature(response) {
     "#sky-description-special"
   );
   let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = `${response.data.main.humidity}%`;
+
   let windSpeed = document.querySelector("#wind-speed");
+  windSpeed.innerHTML = `${response.data.wind.speed} km/h`;
+
+  let visibilityElement = document.querySelector("#visibility");
+  visibilityElement.innerHTML = `${response.data.visibility / 1000} km`;
+
   let sunrise = document.querySelector("#sunrise");
+  sunrise.innerHTML = `0${convertTime(response.data.sys.sunrise)}
+  `;
+
   let sunset = document.querySelector("#sunset");
+  sunset.innerHTML = `${convertTime(response.data.sys.sunset)} `;
+
   let dateElement = document.querySelector("#current-date");
 
   iconElement.setAttribute(
